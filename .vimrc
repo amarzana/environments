@@ -27,9 +27,9 @@ NeoBundleCheck
 " My Original
 
 set title
-set tabstop=4
+set tabstop=2 "for rails
 set expandtab
-set shiftwidth=4
+set shiftwidth=2 "for rails
 set autoindent
 set number
 set ambiwidth=double
@@ -39,5 +39,5 @@ set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set nrformats-=octal
 set whichwrap=b,s,[,],<,>
 set backspace=indent,eol,start
-
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
