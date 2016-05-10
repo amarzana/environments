@@ -1,3 +1,5 @@
 # VIM editor settings
+  .vim_rc
 
-# Terminal settings
+# BASH Terminal settings
+  .bash_profile
