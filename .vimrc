@@ -19,6 +19,9 @@ NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'scrooloose/nerdtree' " ディレクトリツリー表示
 NeoBundle 'tpope/vim-rails' "rails.vim
+NeoBundle 'tpope/vim-endwise' "for ruby
+NeoBundle 'tomtom/tcomment_vim' "Comment On/Off by Ctrl + -
+
 
 " Colorscheme
 " jellybeans
@@ -46,7 +49,9 @@ set nrformats-=octal
 set whichwrap=b,s,[,],<,>
 set backspace=indent,eol,start
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-
+imap { {}<LEFT>
+imap [ []<LEFT>
+imap ( ()<LEFT>
 
 
 "--------------neocomplcache------------------
