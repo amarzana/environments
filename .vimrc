@@ -20,6 +20,10 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'scrooloose/nerdtree' " ディレクトリツリー表示
 NeoBundle 'tpope/vim-rails' "rails.vim
 
+" Colorscheme
+" jellybeans
+NeoBundle 'nanotech/jellybeans.vim'
+
 call neobundle#end()
 filetype plugin indent on
 
@@ -139,3 +143,21 @@ let g:neocomplcache_force_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 "--------------neocomplcache------------------↲
 
+
+"--------------ColorScheme--------------------
+colorscheme jellybeans
+if &term =~ "xterm-256color" || "screen-256color"
+  set t_Co=256
+  set t_Sf=[3%dm
+  set t_Sb=[4%dm
+elseif &term =~ "xterm-color"
+  set t_Co=8
+  set t_Sf=[3%dm
+  set t_Sb=[4%dm
+endif
+
+syntax enable
+hi PmenuSel cterm=reverse ctermfg=33 ctermbg=222 gui=reverse guifg=#3399ff guibg=#f0e68c
+
+"-------------Font---------------------------
+set guifont=Ricty:h14
