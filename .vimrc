@@ -36,9 +36,9 @@ NeoBundleCheck
 " My Original
 
 set title
-set tabstop=2 "for rails
+set tabstop=4
 set expandtab
-set shiftwidth=2 "for rails
+set shiftwidth=4
 set autoindent
 set number
 set ambiwidth=double
@@ -55,8 +55,15 @@ imap ( ()<LEFT>
 nnoremap Y y$
 set display=lastline
 
-"日本語入力時のカーソルの色
-hi CursorIM     guifg=slategrey guibg=DarkSalmon
+
+
+function! InitRails()
+  set tabstop=2
+  set shiftwidth=2
+endfunction
+
+autocmd BufEnter * if &filetype == "rb" | call InitRails() | endif
+
 
 
 
