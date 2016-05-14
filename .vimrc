@@ -21,7 +21,7 @@ NeoBundle 'scrooloose/nerdtree' " ディレクトリツリー表示
 NeoBundle 'tpope/vim-rails' "rails.vim
 NeoBundle 'tpope/vim-endwise' "for ruby
 NeoBundle 'tomtom/tcomment_vim' "Comment On/Off by Ctrl + -
-
+NeoBundle 'thinca/vim-quickrun' "quick codes quick
 
 " Colorscheme
 " jellybeans
@@ -48,10 +48,17 @@ set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set nrformats-=octal
 set whichwrap=b,s,[,],<,>
 set backspace=indent,eol,start
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <silent><C-e> :NERDTreeToggle<CR> "Ctrl+E to Use NERDTree
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
+nnoremap Y y$
+set display=lastline
+
+"日本語入力時のカーソルの色
+hi CursorIM     guifg=slategrey guibg=DarkSalmon
+
+
 
 
 "--------------neocomplcache------------------
