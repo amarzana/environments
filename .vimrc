@@ -49,12 +49,12 @@ set nrformats-=octal
 set whichwrap=b,s,[,],<,>
 set backspace=indent,eol,start
 nnoremap <silent><C-e> :NERDTreeToggle<CR> "Ctrl+E to Use NERDTree
-imap { {}<LEFT>
-imap [ []<LEFT>
-imap ( ()<LEFT>
 nnoremap Y y$
-set display=lastline
-
+set ruler
+" 対応括弧をハイライト表示する
+set showmatch
+" 対応括弧の表示秒数を3秒にする
+set matchtime=3
 
 
 function! InitRails()
